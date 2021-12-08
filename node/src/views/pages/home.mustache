@@ -1,0 +1,22 @@
+{{>partials/header}}
+
+    {{#showWelcome}}
+        Opa tudo bem {{user.name}}?
+    {{/showWelcome}}
+
+    {{^showWelcome}}
+        Não seja bem vindo {{user.name}}?
+    {{/showWelcome}}
+
+
+    <h2>Produtos</h2>
+    <ul>
+    {{#products}}
+        <li>
+            {{title}} - R$ {{price}}
+        </li>
+    {{/products}}
+    </ul>
+
+
+{{>partials/footer}}
